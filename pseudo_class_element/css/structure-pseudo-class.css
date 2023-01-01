@@ -1,0 +1,258 @@
+*:focus {
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: url(../image.jpeg);
+    background-size: 700px;
+}
+
+#pseudo-class {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+.pseudo-class-nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(to bottom, #000, #000 40%, rgba(0, 0, 0, 0));
+}
+.index-button {
+    display: flex;
+    width: 100px;
+    height: 10px;
+    padding: 25px;
+    margin: 20px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80%;
+    font-size: 16px;
+    background: linear-gradient(to top, yellow, white 60%, white);
+}
+
+.index-button:hover, .index-button:active, .index-button:focus  {
+    border: none;
+    width: 102px;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 80%;
+    font-size: 18px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.459);
+}
+aside {
+    display: flex;
+    margin-left: auto;
+}
+aside > a{
+    display: flex;
+    margin: 30px;
+    font-family: monospace;
+    font-size: 20px;
+    color: #fff;
+}
+
+aside > a:hover, aside > a:active, aside > a:focus{
+    display: flex;
+    margin: 30px;
+    font-family: monospace;
+    font-size: 22px;
+    color: rgb(236, 70, 70);
+}
+
+#content {
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+#pseudo-class-content {
+    display: flex;
+    margin: 100px 90px 0 90px;
+    width: 100%;
+    height: 1000px;
+    background: rgba(0, 0, 0, 0.411);
+    overflow: auto;
+}
+
+nav {
+    position: fixed;
+    height: 1000px;
+    overflow: hidden;
+}
+  
+nav > ul {
+    height: 1000px;
+    background: rgb(172, 172, 172);
+}
+
+nav a > li {
+    padding: 30px;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+nav a > li:hover, nav ul > li:active, nav ul > li:focus {
+    padding: 30px;
+    font-family: monospace;
+    font-size: 20px;
+    background-color: rgb(117, 117, 117);
+}
+
+#inner-container {
+    width: 100%;
+    height: 2000px;
+    margin-left: 400px;
+    padding: 50px 0 50px 0px;
+    overflow: auto;
+    font-size: 20px;
+    color: white;
+}
+
+#inner-container h2 {
+    margin-bottom: 40px;
+    font-family: monospace;
+    font-size: 50px;
+    color: white;
+}
+
+#name:target >h2, #link:target >h2, #visited:target >h2, #hover:target >h2, #active:target >h2, #focus:target >h2, #target:target >h2, #notice:target >h2, #enable-disabled:target >h2, #checked:target >h2, #not:target >h2, #notice2:target >h2,
+#name h2:hover, #link h2:hover, #visited h2:hover, #hover h2:hover, #active h2:hover, #focus h2:hover, #target h2:hover, #notice h2:hover, #enable-disabled h2:hover, #checked h2:hover, #not h2:hover, #notice2 h2:hover
+{
+    color: rgb(255, 252, 67);
+    overflow: hidden;
+}
+
+#inner-container p {
+    font-weight: lighter;
+    line-height: 1.6;
+    margin-left: 15px;
+}
+
+.box-present {
+    width: 800px;
+    padding: 30px;
+    margin: 15px;
+    background-color: #000;
+    border-radius: 13px;
+    font-family: monospace;
+    color: steelblue;
+}
+.box {
+    width: 800px;
+    padding: 30px;
+    margin: 15px;
+    background-color: #000;
+    border-radius: 13px;
+    font-family: monospace;
+    color: darkorange;
+}
+
+.margin-bottom {
+    margin-bottom: 300px;
+}
+
+.ex2 {
+    width: 300px;
+    height: 168px;
+    line-height: 168px;
+    background-color: #000;
+    margin-top: 15px;
+}
+.ex, .ex2, .tab {
+    margin-left: 15px;
+    margin-bottom: 20px;
+    font-size: 37px;
+}
+
+.ex:link, .ex2:link {
+    color: blue;
+}
+
+.ex:visited, .ex2:visited {
+    color: purple;
+}
+
+.ex:hover {
+    color: yellowgreen;
+}
+
+.ex2:hover {
+    color: rgba(255, 255, 255, 0);
+    background: url(../cat.jpeg) no-repeat;
+}
+
+.click {
+    display: inline;
+    padding: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: gray;
+    box-shadow: rgb(71, 70, 70) inset 5px 5px 10px;
+}
+.click:active {
+    font-size: 35px;
+    font-weight: border;
+    color: rgb(236, 70, 70);
+}
+
+.tab:focus {
+    color: rgb(236, 70, 70);
+}
+
+#enable-disabled input:enabled {
+    margin-left: 15px;
+    width: 200px;
+    background-color: pink;
+}
+
+#enable-disabled input:disabled {
+    margin-left: 15px;
+    width: 200px;
+    background-color: skyblue;
+}
+
+#not ul {
+    margin-left: 15px;
+}
+
+#checked input {
+    margin-left: 15px;
+}
+
+#checked input:checked + label {
+    color: rgb(236, 70, 70);
+}
+
+#not label > input {
+    margin-left: 10px;
+}
+#not input:not([type=radio]) {
+    background-color: skyblue;
+    border: 2px solid yellow;
+    margin-bottom: 50px;
+}
+
+.notice2-ex {
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.notice2-ex p:nth-child(odd) {
+    background-color: blue;
+}
+
+.notice2-ex p:nth-child(even) {
+    background-color: yellow;
+    color: #000;
+}

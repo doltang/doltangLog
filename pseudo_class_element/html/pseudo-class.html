@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/resetcss@1.0.3/reset.min.css">
+    <link rel="stylesheet" href="../css/pseudo-class.css">
+    <title>가상 클래스 선택자</title>
+</head>
+
+<body>
+    <div id="pseudo-class">
+        <nav class="pseudo-class-nav">
+            <a href="./index.html">
+                <button class="index-button">
+                    INDEX
+                </button>
+            </a>
+            <aside>
+                <a href="./pseudo-class.html">
+                    pseudo-class
+                </a>
+                <a href="./structure-pseudo-class.html">
+                    structure-pseudo-class
+                </a>
+                <a href="./pseudo-element.html">
+                    pseudo-element
+                </a>
+            </aside>
+        </nav>
+        <div id="content">
+            <div id="pseudo-class-content">
+                <nav>
+                    <ul>
+                        <a href="#name">
+                            <li>pseudo-class</li>
+                        </a>
+                        <a href="#link">
+                            <li>:link</li>
+                        </a>
+                        <a href="#visited">
+                            <li>:visited</li>
+                        </a>
+                        <a href="#hover">
+                            <li>:hover</li>
+                        </a>
+                        <a href="#active">
+                            <li>:active</li>
+                        </a>
+                        <a href="#focus">
+                            <li>:focus</li>
+                        </a>
+                        <a href="#target">
+                            <li>:target</li>
+                        </a>
+                        <a href="#notice">
+                            <li>⭐️</li>
+                        </a>
+                        <a href="#enable-disabled">
+                            <li>:enabled <br> :disabled</li>
+                        </a>
+                        <a href="#checked">
+                            <li>:checked</li>
+                        </a>
+                        <a href="#not">
+                            <li>:not</li>
+                        </a>
+                    </ul>
+                </nav>
+                <div id="inner-container">
+
+                    <div id="name" class="margin-bottom">
+                        <h2>pseudo-class</h2>
+                        <div class="box-present">
+                            E:pseudo-class
+                        </div>
+                        <p>
+                            가짜 클래스를 만드는 선택자.
+                            <br>
+                            사용자가 웹 요소를 클릭하거나 마우스 포인터를 올려놓는 등 특정 동작을 할 때 스타일을 바꿀 수 있도록 한다.
+                        </p>
+                    </div>
+
+                    <div id="link" class="margin-bottom">
+                        <h2>:link</h2>
+                        <a class="ex" href="../html/unknown/unknown.html" target="_self">example</a>
+                        <div class="box">
+                            .example:link { color: blue; }
+                        </div>
+                        <p>
+                            방문하지 않은 링크에 스타일을 적용한다.
+                            <br>
+                            텍스트 링크는 기본적으로 파란색 글자와 밑줄로 표시된다.
+                        </p>
+                    </div>
+                    <div id="visited" class="margin-bottom">
+                        <h2>:visited</h2>
+                        <a class="ex" href="../html/unknown/unknown.html">example</a>
+                        <div class="box">
+                            .example:visited { color: purple; }
+                        </div>
+                        <p>
+                            방문한 링크에 스타일을 적용한다.
+                            <br>
+                            한 번 이상 방문한 텍스트 링크는 보라색이 기본 값이다.
+                        </p>
+                    </div>
+                    <div id="hover" class="margin-bottom">
+                        <h2>:hover</h2>
+                        <a class="ex" href="../html/unknown/unknown.html">example1</a>
+                        <div class="ex2">example2</div>
+                        <div class="box">
+                            .example1:hover { color: yellow; }
+                            <br>
+                            .example2:hover { background: url(../cat.jpeg); }
+                        </div>
+                        <p>
+                            특정 요소에 마우스 포인터를 올려놓으면 스타일을 적용한다.
+                            <br>
+                            색상 뿐 아니라, 다른 이미지로 바뀌거나, 메인 메뉴 위로 마우스 포인터를 올려놓았을 때 서브메뉴가 나타나는 효과를 만들 수 있다.
+                        </p>
+                    </div>
+                    <div id="active" class="margin-bottom">
+                        <h2>:active</h2>
+                        <p class="click">click</p>
+                        <div class="box">
+                            .example:active { color: red; }
+                        </div>
+                        <p>
+                            클릭 했을 때 스타일을 적용한다.
+                        </p>
+                    </div>
+                    <div id="focus" class="margin-bottom">
+                        <h2>:focus</h2>
+                        <input class="tab" type="text" placeholder="example">
+                        <div class="box">
+                            .example:focus { color: red; }
+                        </div>
+                        <p>
+                            웹 요소에 초점이 맞추어졌을 때 스타일을 적용한다.
+                            <br>
+                            텍스트 필드 안에 마우스 포인터를 올려 놓거나, 웹 문서에서 tab 키를 눌러 입력 커서를 이동했을 때 스타일을 지정.
+                        </p>
+                    </div>
+                    <div id="target" class="margin-bottom">
+                        <h2>:target</h2>
+                        <div class="box">
+                            .example:target { color: yellow; }
+                        </div>
+                        <p>
+                            같은 문서 안에서 다른 위치로 이동할 때에는 '앵커(anchor)'를 사용한다.
+                            <br>
+                            이 때,:target 선택자를 이용하면 앵커로 연결된 부분, 즉 앵커의 목적지가 되는 부분의 스타일을 쉽게 적용할 수 있다.
+                        </p>
+                    </div>
+                    <div id="notice" class="margin-bottom">
+                        <h2>⭐️</h2>
+                        <div class="box">
+                            <p>1️⃣ :link</p>    
+                            <p> 2️⃣ :visited</p>   
+                            <p>3️⃣ :hover</p>     
+                            <p>4️⃣ :active</p>
+                        </div>
+                        <p>
+                            가상 클래스 선택자는 위 와 같은 순서로 정의해야 한다.
+                            <br>
+                            이 순서가 바뀌면 스타일을 정의하더라도 제대로 적용되지 않는다.
+                        </p>
+                    </div>
+                    <div id="enable-disabled" class="margin-bottom">
+                        <h2>:enabled :disabled</h2>
+                        <input type="textarea" placeholder="enabled-example">
+                        <input type="textarea" placeholder="disabled-example" disabled>
+                        <div class="box">
+                            <p>&lt;input type="textarea"&gt;</p>
+                            <p>&lt;input type="textarea" disabled&gt;</p>
+                            <br>
+                            <p>.input:enabled { background-color: pink; }</p> 
+                            <p>.input:disabled { background-color: skyblue; }</p>
+                        </div>
+                        <p>
+                            해당요소가 사용할 수 있는 상태일 때 스타일을 지정하려면 :enabled 선택자를 사용.
+                            <br>
+                            사용자가 입력할 수 없는 요소 일 경우(disabled 속성을 지정한 요소) :disabled 선택자를 사용해 스타일을 쉽게 지정할 수 있다.
+                        </p>
+                    </div>
+                    <div id="checked" class="margin-bottom">
+                        <h2>:checked</h2>
+                        <ul>
+                            <li>
+                                <input type="radio" name="example1" id=""example1>
+                                <label for="example1">example1</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="example2" id=""example2>
+                                <label for="example2">example2</label>
+                            </li>
+                        </ul>
+                        <div class="box">
+                            .input:checked + label { color: red; }
+                        </div>
+                        <p>
+                            폼의 라디오 박스나 체크 박스에서 선택된 항목(checked)의 스타일을 지정할 때 사용한다.
+                        </p>
+                    </div>
+                    <div id="not" class="margin-bottom">
+                        <h2>:not</h2>
+                        <ul>
+                            <li><label>이름 <input type="text"></label></li>
+                            <li><label>연락처<input type="tel"></label></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <input type="radio" name="example1" id=""example1>
+                                <label for="example1">example1</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="example2" id=""example2>
+                                <label for="example2">example2</label>
+                            </li>
+                        </ul>
+                        <div class="box">
+                            <p style="color: rgb(41, 119, 236);">:not을 적용하지 않을 때</p>
+                            <br>
+                            <p>
+                                #example input[type=text], input[type=tel] {
+                                background-color: skyblue;
+                                border: 2px solid yellow;
+                                margin-bottom: 50px;
+                            </p>
+                            <br>
+                            <p style="color: rgb(41, 119, 236);">:not을 적용했을 때</p>
+                            <br>
+                            <p>
+                                #example input:not[type=radio]{
+                                background-color: skyblue;
+                                border: 2px solid yellow;
+                                margin-bottom: 50px;
+                            </p>
+                        </div>
+                        <p>
+                            특정 요소를 제외하고 스타일을 적용해준다. <br>
+                            스타일을 적용하려고 하는 필드를 나열하는 것보다 적용하지 않는 필드가 더 적을 때 편리하게 사용된다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

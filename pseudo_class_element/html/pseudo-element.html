@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/resetcss@1.0.3/reset.min.css">
+    <link rel="stylesheet" href="../css/pseudo-element.css">
+    <title>가상 요소 선택자</title>
+</head>
+
+<body>
+    <div id="pseudo-class">
+        <nav class="pseudo-class-nav">
+            <a href="./index.html">
+                <button class="index-button">
+                    INDEX
+                </button>
+            </a>
+            <aside>
+                <a href="./pseudo-class.html">
+                    pseudo-class
+                </a>
+                <a href="./structure-pseudo-class.html">
+                    structure-pseudo-class
+                </a>
+                <a href="./pseudo-element.html">
+                    pseudo-element
+                </a>
+            </aside>
+        </nav>
+        <div id="content">
+            <div id="pseudo-class-content">
+                <nav>
+                    <ul>
+                        <a href="#name">
+                            <li>pseudo-element</li>
+                        </a>
+                        <a href="#link">
+                            <li>::first-line</li>
+                        </a>
+                        <a href="#visited">
+                            <li>::first-letter</li>
+                        </a>
+                        <a href="#hover">
+                            <li>::before</li>
+                        </a>
+                        <a href="#active">
+                            <li>::after</li>
+                        </a>
+                    </ul>
+                </nav>
+                <div id="inner-container">
+
+                    <div id="name" class="margin-bottom">
+                        <h2>pseudo-element</h2>
+                        <div class="box-present">
+                            E::pseudo-element
+                        </div>
+                        <p>
+                            css에서 html에게 가상의 요소(Element)를 만들어 제공할 수 있다.
+                            <br>
+                            ::before 과 ::after는 :를 하나만 써줘도 동작하는데 문제가 없지만, 가상 클래스와 혼동 될 수 있으므로 '::'로 써준다.
+                        </p>
+                    </div>
+
+                    <div id="link" class="margin-bottom">
+                        <h2>::first-line</h2>
+                        <div class="box-present">
+                            E::first-line
+                        </div>
+                        <div class="box">
+                            p::first-line {
+                            color: red;
+                            }
+                        </div>
+                        <div class="box ex-box1">
+                            <p>원숭이 엉덩이는 빨개</p>
+                            <br>
+                            <p>빨가면 사과</p>
+                            <br>
+                            <p>사과는 맛있어</p>
+                        </div>
+                        <p>
+                            지정한 요소의 첫 번째 줄에 스타일을 적용한다.
+                        </p>
+                    </div>
+
+                    <div id="visited" class="margin-bottom">
+                        <h2>::first-letter</h2>
+                        <div class="box-present">
+                            E::first-letter
+                        </div>
+                        <div class="box">
+                            p::first-letter {
+                            color: red;
+                            }
+                        </div>
+                        <div class="box ex-box2">
+                            <p>원숭이 엉덩이는 빨개</p>
+                            <br>
+                            <p>빨가면 사과</p>
+                            <br>
+                            <p>사과는 맛있어</p>
+                        </div>
+                        <p>
+                            지정한 요소의 첫 번째 글자에 스타일을 적용한다.
+                        </p>
+                    </div>
+
+                    <div id="hover" class="margin-bottom">
+                        <h2>::before</h2>
+                        <div class="box-present">
+                            E::before
+                        </div>
+                        <div class="box">
+                            li::before {
+                            <br><br>
+                            <p>content: "숫자";</p>
+                            <p>font-weight: 500;</p>
+                            <p>color: red;</p>
+                            <p>margin-right: 10px;</p>
+                            <br>
+                            }
+                        </div>
+                        <div class="box ex-box3">
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                            </ul>
+                        </div>
+                        <p>
+                            지정한 요소의 내용 앞에 스타일을 넣을 수 있다.
+                        </p>
+                    </div>
+                    <div id="active" class="margin-bottom">
+                        <h2>::after</h2>
+                        <div class="box-present">
+                            E::after
+                        </div>
+                        <div class="box">
+                            li::after {
+                            <br><br>
+                            <p>content: "귀엽다";</p>
+                            <p>font-weight: 500;</p>
+                            <p>color: pink;</p>
+                            <p>margin-left: 10px;</p>
+                            <br>
+                            }
+                        </div>
+                        <div class="box ex-box4">
+                            <ul>
+                                <li>고양이는</li>
+                                <li>강아지는</li>
+                                <li>햄스터는</li>
+                                <li>다람쥐는</li>
+                            </ul>
+                        </div>
+                        <p>
+                            지정한 요소의 내용 뒤에 스타일을 넣을 수 있다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
