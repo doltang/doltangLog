@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-left: 30px;
+            padding-bottom: 20px;
+        }
+        .mainContainer {
+            border: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+        #thirdContainer {
+            padding: 0;
+            margin-bottom: 3px;
+        }
+        .thirdTitle {
+            margin-bottom: 16px;
+        }
+        .firstItems {
+            width: 50px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset class="container">
+            <h1>프런트엔드 개발자 지원서</h1>
+            <p>HTML,CSS,자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다.</p>
+            <hr>
+            <fieldset class="mainContainer">
+                <legend><strong>개인 정보</strong></legend>
+                <ul>
+                    <li>
+                        <label for="name" class="firstItems">이름</label>
+                        <input type="text" placeholder="공백 없이 입력하세요">
+                    </li>
+                    <li>
+                        <label for="phone" class="firstItems">연락처</label>
+                        <input type="tel">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="mainContainer">
+                <legend><strong>지원 분야</strong></legend>
+                <ul>
+                    <li>
+                        <input type="radio" name="subject" id="wp">
+                        <label for="wp">웹 퍼블리싱</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="subject" id="wa">
+                        <label for="wa">웹 애플리케이션 개발</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="subject" id="de">
+                        <label for="de">개발 환경 개선</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="mainContainer" id="thirdContainer">
+                <legend class="thirdTitle"><strong>지원 동기</strong></legend>
+                <textarea cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+            </fieldset>
+            <input type="submit" value="접수하기">
+            <input type="reset" value="다시 쓰기">
+        </fieldset>
+    </form>
+</body>
+</html>

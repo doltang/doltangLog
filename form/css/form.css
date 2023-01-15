@@ -1,0 +1,7 @@
+body {
+    height: 4000px;
+}
+input[type="image"] {
+    position: relative;
+    top: 10px;
+}
