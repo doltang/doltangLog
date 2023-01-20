@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/resetcss@1.0.3/reset.min.css"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>MAIN</title>
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <header>
+      <!-- 메인 로고 -->
+      <div id="logoContainer">
+        <a href="./main.html" id="logo">
+          <img id="logoIcon" src="../images/logo.svg" alt="MAIN" />
+        </a>
+      </div>
+
+      <!-- 메뉴 -->
+      <div id="menuContainer">
+        <div id="menuBox">
+          <a href="#myL"> MY LIKES </a>
+          <a href="#sBag"> SHOPPING BAG </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 -->
+    <main>
+      <!-- SHOPPING LIST -->
+      <div class="title" id="shoppingList"><p>SHOPPING LIST</p></div>
+      <div id="shoppingList">
+        <div class="itemContainer">
+          <div class="item">
+            <div class="photoContainer">
+              <img class="image1" src="../images/image1.jpeg" alt="" />
+            </div>
+            <div class="itemBox">
+              <div class="itemInfo">
+                <p class="itemName name1"></p>
+                <p class="itemPrice price1"></p>
+              </div>
+              <div class="itemIcon">
+                <div class="cartBtn cart1">
+                  <img class="icon" src="../images/shoppingBagAdd.svg" alt="" />
+                </div>
+                <div class="likeBtn" id="like1">
+                  <img class="icon" src="../images/likeAdd.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="photoContainer">
+              <img class="image2" src="" alt="" />
+            </div>
+            <div class="itemBox">
+              <div class="itemInfo">
+                <p class="itemName name2"></p>
+                <p class="itemPrice price2"></p>
+              </div>
+              <div class="itemIcon">
+                <div class="cartBtn cart2">
+                  <img class="icon" src="../images/shoppingBagAdd.svg" alt="" />
+                </div>
+                <div class="likeBtn" id="like2">
+                  <img class="icon" src="../images/likeAdd.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="photoContainer">
+              <img class="image3" src="../images/image3.jpeg" alt="" />
+            </div>
+            <div class="itemBox">
+              <div class="itemInfo">
+                <p class="itemName name3">아이템</p>
+                <p class="itemPrice price3">10000원</p>
+              </div>
+              <div class="itemIcon">
+                <div class="cartBtn cart3">
+                  <img class="icon" src="../images/shoppingBagAdd.svg" alt="" />
+                </div>
+                <div class="likeBtn" id="like3">
+                  <img class="icon" src="../images/likeAdd.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="photoContainer">
+              <img class="image4" src="../images/image4.jpeg" alt="" />
+            </div>
+            <div class="itemBox">
+              <div class="itemInfo">
+                <p class="itemName name4">아이템</p>
+                <p class="itemPrice price4">10000원</p>
+              </div>
+              <div class="itemIcon">
+                <div class="cartBtn cart4">
+                  <img class="icon" src="../images/shoppingBagAdd.svg" alt="" />
+                </div>
+                <div class="likeBtn" id="like4">
+                  <img class="icon" src="../images/likeAdd.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MY LIKES -->
+      <div class="title" id="myL"><p>MY LIKES</p></div>
+      <div id="myLikes">
+        <p id="noLikedItems">좋아요 한 상품이 없습니다.</p>
+        <div id="LikedItemContainer" class="itemContainer">
+          <div class="item likedItem" id="likedItem1">
+            <div class="photoContainer">
+              <img class="image1" src="../images/image1.jpeg" alt="" />
+            </div>
+            <div class="itemBox">
+              <div class="itemInfo">
+                <p class="itemName name1"></p>
+                <p class="itemPrice price1"></p>
+              </div>
+              <div class="itemIcon">
+                <div class="cartBtn cart1">
+                  <img class="icon" src="../images/shoppingBagAdd.svg" alt="" />
+                </div>
+                <div class="likeBtn" id="dLike1">
+                  <img class="icon" src="../images/likeDelete.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item likedItem" id="likedItem2">
+            <div class="photoContainer">
+              <img class="image2" src="" alt="" />
+            </div>
+            <div class="itemBox">
+              <div class="itemInfo">
+                <p class="itemName name2"></p>
+                <p class="itemPrice price2"></p>
+              </div>
+              <div class="itemIcon">
+                <div class="cartBtn cart2">
+                  <img class="icon" src="../images/shoppingBagAdd.svg" alt="" />
+                </div>
+                <div class="likeBtn" id="dLike2">
+                  <img class="icon" src="../images/likeDelete.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item likedItem" id="likedItem3">
+            <div class="photoContainer">
+              <img class="image3" src="../images/image3.jpeg" alt="" />
+            </div>
+            <div class="itemBox">
+              <div class="itemInfo">
+                <p class="itemName name3"></p>
+                <p class="itemPrice price3"></p>
+              </div>
+              <div class="itemIcon">
+                <div class="cartBtn cart3">
+                  <img class="icon" src="../images/shoppingBagAdd.svg" alt="" />
+                </div>
+                <div class="likeBtn" id="dLike3">
+                  <img class="icon" src="../images/likeDelete.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item likedItem" id="likedItem4">
+            <div class="photoContainer">
+              <img class="image4" src="../images/image4.jpeg" alt="" />
+            </div>
+            <div class="itemBox">
+              <div class="itemInfo">
+                <p class="itemName name4">아이템</p>
+                <p class="itemPrice price4">10000원</p>
+              </div>
+              <div class="itemIcon">
+                <div class="cartBtn cart4">
+                  <img class="icon" src="../images/shoppingBagAdd.svg" alt="" />
+                </div>
+                <div class="likeBtn" id="dLike4">
+                  <img class="icon" src="../images/likeDelete.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHOPPING BAG -->
+      <div class="title" id="sBag"><p>SHOPPING BAG</p></div>
+      <div id="shoppingBag">
+        <p id="noCartItems">장바구니에 담은 상품이 없습니다.</p>
+        <!-- 장바구니 리스트 -->
+        <div id="cartContainer">
+          <div class="cartItem" id="cartItem1">
+            <div class="photoContainer">
+              <img class="image1" src="../images/image1.jpeg" alt="" />
+            </div>
+            <div class="itemBox">
+              <div class="itemInfo">
+                <p class="itemName name1"></p>
+                <p class="itemPrice price1"></p>
+              </div>
+            </div>
+            <div class="numberContainer">
+              <input
+                class="itemNumber"
+                type="number"
+                min="1"
+                max="5"
+                value="1"
+              />
+            </div>
+            <div class="moneyContainer">
+              <p class="cartPrice">179000</p>
+            </div>
+          </div>
+
+          <div class="cartItem" id="cartItem2">
+            <div class="photoContainer">
+              <img class="image2" src="../images/image1.jpeg" alt="" />
+            </div>
+            <div class="itemBox">
+              <div class="itemInfo">
+                <p class="itemName name2"></p>
+                <p class="itemPrice price2"></p>
+              </div>
+            </div>
+            <div class="numberContainer">
+              <input
+                class="itemNumber"
+                type="number"
+                min="1"
+                max="5"
+                value="1"
+              />
+            </div>
+            <div class="moneyContainer">
+              <p class="cartPrice">74000</p>
+            </div>
+          </div>
+
+          <div class="cartItem" id="cartItem3">
+            <div class="photoContainer">
+              <img class="image3" src="../images/image1.jpeg" alt="" />
+            </div>
+            <div class="itemBox">
+              <div class="itemInfo">
+                <p class="itemName name3"></p>
+                <p class="itemPrice price3"></p>
+              </div>
+            </div>
+            <div class="numberContainer">
+              <input
+                class="itemNumber"
+                type="number"
+                min="1"
+                max="5"
+                value="1"
+              />
+            </div>
+            <div class="moneyContainer">
+              <p class="cartPrice">78000</p>
+            </div>
+          </div>
+
+          <div class="cartItem" id="cartItem4">
+            <div class="photoContainer">
+              <img class="image4" src="../images/image1.jpeg" alt="" />
+            </div>
+            <div class="itemBox">
+              <div class="itemInfo">
+                <p class="itemName name4"></p>
+                <p class="itemPrice price4"></p>
+              </div>
+            </div>
+            <div class="numberContainer">
+              <input
+                class="itemNumber"
+                type="number"
+                min="1"
+                max="5"
+                value="1"
+              />
+            </div>
+            <div class="moneyContainer">
+              <p class="cartPrice">57000</p>
+            </div>
+          </div>
+          <!-- 클리어 -->
+          <div id="clearContainer">
+            <button id="clearBtn">CLEAR</button>
+          </div>
+        </div>
+        <!-- 총 금액 -->
+        <div id="sumContainer">
+          <p id="sumTitle">총 금액 :</p>
+          <p id="sum">10000</p>
+        </div>
+      </div>
+    </main>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

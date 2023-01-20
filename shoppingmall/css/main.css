@@ -1,0 +1,246 @@
+
+body {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+}
+
+img{
+    width: 380px;
+    height: 380px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.title {
+    display: flex;
+    width: 1640px;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border-top: 5px solid black;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+/* header */
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+header #logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 10px 0;
+    background-color: rgb(37, 153, 95);
+}
+
+header #logoContainer #logoIcon {
+    width: 100px;
+    height: 100px;
+}
+
+header #menuContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 30px;
+    font-weight: 500;
+    color: rgb(37, 153, 95);
+    background-color: rgb(0, 0, 0);
+}
+
+header #menuContainer #menuBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    font-weight: 500;
+    color: rgb(37, 153, 95);
+    background-color: rgb(0, 0, 0);
+}
+
+header #menuContainer #menuTitle {
+    color: white;
+    font-size: 23px;
+}
+
+/* main */
+main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 250px 30px 0 30px ;
+    box-sizing: border-box;
+    gap: 60px;
+}
+
+/* SHOPPING LIST */
+main  #shoppingList {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-around;
+    overflow: auto;
+    gap: 20px;
+}
+
+.title:nth-child(1) {
+    border-top: 1px rgba(139, 33, 33, 0) solid;
+}
+main .itemContainer{
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-around;
+    overflow: auto;
+    gap: 20px;
+}
+
+main .photoContainer img {
+    box-shadow: 2px 10px 20px 1px rgba(0, 0, 0, 0.507);
+}
+
+main .itemBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+main .itemBox .itemInfo {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+main .itemBox .itemIcon {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.likeBtn, .cartBtn {
+    cursor: pointer;
+}
+
+/* MY LIKES */
+#myLikes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 30px 0 30px ;
+    box-sizing: border-box;
+}
+
+#myLikes #noLikedItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding-bottom: 100px;
+}
+
+#myLikes  #LikedItemContainer{
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-around;
+    overflow: auto;
+    gap: 20px;
+}
+
+#myLikes  .likedItem {
+    display: none;
+    flex-flow: column;
+}
+
+/* SHOPPING BAG */
+#shoppingBag {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 30px ;
+    box-sizing: border-box;
+    gap: 30px;
+}
+
+#shoppingBag #noCartItems {
+    width: 1640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 0  0 100px 0;
+    box-sizing: border-box;
+}
+
+#shoppingBag img {
+    width: 200px;
+    height: 200px;
+}
+
+#shoppingBag  #cartContainer {
+    width: 1200px;
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
+    padding: 0 0 50px 0;
+    /* border-top: 5px solid black;
+    border-bottom: 5px solid black; */
+}
+
+#shoppingBag  #cartContainer .cartItem {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+#shoppingBag  #cartContainer .itemBox {
+    width: 300px;
+}
+
+#shoppingBag  #cartContainer .numberContainer {
+    width: 200px;
+}
+
+#shoppingBag  #cartContainer .moneyContainer {
+    width: 200px;
+}
+
+#shoppingBag #clearContainer {
+    display: none;
+    margin-top: 30px;
+    margin-right: 650px;
+}
+
+#shoppingBag #sumContainer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 50px;
+    width: 1640px;
+    border-top: 5px solid black;
+}
+
+#shoppingBag #sumContainer p {
+    font-size: 40px;  
+}
+
