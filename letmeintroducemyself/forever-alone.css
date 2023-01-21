@@ -1,0 +1,54 @@
+body {
+    background-color: rgb(48, 155, 101);
+}
+
+.header {
+    padding-top: 30px;
+}
+.header ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+.header li {
+    list-style: none;
+    font-size: 20px;
+}
+
+.index {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+
+a:link, a:visited {
+    display: block;
+    color: #000;
+    text-decoration: none;
+} 
+
+.header li:hover {
+    color: #fff;
+}
+
+.main-container {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    padding: 200px;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: #fff;
+}
+.main-container > div {
+    width: 894px;
+    height: 1278px;
+    background: url(./picture/forever.png) no-repeat;
+}
+.main-container > div:hover {
+    width: 894px;
+    height: 1278px;
+    background: url(./picture/feminist.JPG) no-repeat;
+    background-size: 100%;
+}

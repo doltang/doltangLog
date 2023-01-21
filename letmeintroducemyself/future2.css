@@ -1,0 +1,73 @@
+body {
+    background-color: rgb(48, 155, 101);
+}
+
+.header {
+    padding-top: 30px;
+}
+.header ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+.header li {
+    list-style: none;
+    font-size: 20px;
+}
+
+.index {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+
+a:link, a:visited {
+    display: block;
+    color: #000;
+    text-decoration: none;
+} 
+
+.header li:hover {
+    color: #fff;
+}
+
+.main-container {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: #fff;
+}
+.main-container > .ceo-img {
+    width: 624px;
+    height: 420px;
+    background: url(./picture/ceo.png) no-repeat;
+}
+
+.main-container img {
+    position: absolute;
+    width: 20px;
+    right: 44%;
+    bottom: 47%;
+    transition-property: width;
+    transition-duration: 2s, 1s;
+}
+
+.main-container img:hover {
+    position: absolute;
+    width: 230px;
+    right: 44%;
+    bottom: 47%;
+}
+
+.sticker {
+    position: absolute;
+    z-index: 99;
+    width: 200px;
+    height: 100px;
+    margin:220px 0 0 20px;
+    background-color: rgba(48, 155, 102, 0);
+}
