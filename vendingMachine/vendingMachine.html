@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vending Machine</title>
+    <link rel="stylesheet" href="./vendingMachine.css" />
+  </head>
+  <body>
+    <div id="container">
+      <section id="machine">
+        <ul id="item-list">
+          <li>
+            <img src="./images/coke.png" alt="" />
+            <p>콜라</p>
+            <button class="btn" onclick="vendingMachine(2000)">2000</button>
+          </li>
+          <li>
+            <img src="./images/water.png" alt="" />
+            <p>물</p>
+            <button class="btn" onclick="vendingMachine(1500)">1500</button>
+          </li>
+          <li>
+            <img src="./images/coffee.png" alt="" />
+            <p>커피</p>
+            <button class="btn" onclick="vendingMachine(2500)">2500</button>
+          </li>
+          <li>
+            <img src="./images/milk.png" alt="" />
+            <p>우유</p>
+            <button class="btn" onclick="vendingMachine(2000)">2000</button>
+          </li>
+          <li>
+            <img src="./images/low.png" alt="" />
+            <p>저지방 우유</p>
+            <button class="btn" onclick="vendingMachine(2000)">2500</button>
+          </li>
+          <li>
+            <img src="./images/berry.png" alt="" />
+            <p>딸기 우유</p>
+            <button class="btn" onclick="vendingMachine(2000)">2500</button>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <script>
+      function vendingMachine(num) {
+        let input = prompt("돈을 투입구에 넣어주세요", "정수만 입력해주세요"); // ❓prompt에 어떻게 이벤트를 넣지? maxlength 넣을 수 있나?
+
+        if (input !== null) {
+          if (input !== "" && input % 1 === 0) {
+            if (input == num) {
+              alert("음료를 얻었다!");
+            }
+            if (input > num) {
+              let change = input - num;
+              alert(`거스름돈 ${change}원이 나왔다!`);
+            }
+            if (input < num) {
+              alert("돈이 모자라!");
+            }
+          } else alert("'돈'을 넣어야지!");
+        } else alert("역시 안마실래");
+      }
+    </script>
+  </body>
+</html>
