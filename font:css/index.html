@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 30px;
+        }
+        body {
+            font-size: 16px;
+        }
+        /* rem 예시 */
+        .rem-parent {
+            background-color: beige;
+            font-size: 16px;
+        }
+        .rem-child {
+            font-size: 1rem;
+        }
+
+        /* font-family */
+        .font-family {
+            background-color: lightgrey;
+        }
+        .serif {
+            font-family: serif;
+        }
+        .sans-serif {
+            font-family: sans-serif;
+        }
+        .monospace {
+            font-family: monospace;
+        }
+        .cursive {
+            font-family: cursive;
+        }
+        .fantasy {
+            font-family: fantasy;
+        }
+
+        /* 백분율 예시 */
+        .per-parent {
+            background-color: rgb(243, 130, 224);
+            font-size: 50px;
+        }
+        .per-child {
+            font-size: 100%;
+        }
+       
+        /* em 예시 */
+        .em-parent {
+            background-color: rgb(140, 230, 162);
+            font-size: 16px;
+        }
+        .em-child {
+            font-size: 1em;
+        }
+        /* ex 예시 */
+        .ex-example {
+            background-color: rgb(206, 206, 250);
+        }
+        sup {
+        vertical-align: baseline;
+        position: relative;
+        bottom: 3ex
+        }
+
+        /* iralic 과 oblique의 차이 */
+        .italic-ob {
+            background-color: rgb(211, 211, 59);
+        }
+        .italic {
+            font-style: italic;
+        }
+        .ob {
+            font-style: oblique;
+        }
+
+        /* 상대적 두께 */
+        .border-parent {
+            background-color: palegreen;
+            font-weight: 500;
+        }
+        .border-child {
+            font-weight: bolder;
+        }
+        .lighter-child {
+            font-weight: lighter;
+        }
+
+        /*tex-align*/
+        .align-parent {
+            text-align: center;
+        }
+        .start {
+            text-align: start;
+        }
+        .end {
+            text-align: end;
+        }
+        .left {
+            text-align: left;
+        }
+        .right {
+            text-align: right;
+        }
+        .center {
+            text-align: center;
+        }
+        .justify {
+            text-align: justify;
+        }
+        .match-parent {
+            text-align: match-parent;
+        }
+
+        /* line-height의 px과 숫자의 차이 (기본크기 16px) */
+        .ex3 {
+            line-height: 32px;
+        }
+        .ex4 {
+            line-height: 2;
+        }
+
+        /* line-height의 px의 문제점: 글자크기를 바꿨을때 line-height도 바꿔줘야함. 그래서 배수로 적는걸 권장 */
+        .ex5 {
+            font-size: 30px;
+            line-height: 32px;
+        }
+        .ex6 {
+            font-size: 30px;
+            line-height: 2;
+        }
+
+        /* line-height는 1.4~1.7이 읽기에 적당 */
+        .ex7 {
+            font-size: 30px;
+            line-height: 1.6;
+        }
+
+        /* 세로정렬 line-height */
+        .heading {
+            width: 100%;
+            height: 100px;
+            background: #222;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            line-height: 100px;
+        }
+
+        /* text-shadow */
+        .shadow1 {
+            color: red;
+            text-shadow: 2px 2px black; /* 가로, 세로 거리, 색상 지정 */
+        }
+        .shadow2 {
+            text-shadow: 5px 5px 3px #ffa500; /* 가로, 세로 거리, 번짐 지정, 색상 지정 */
+        }
+        .shadow3 {
+            color: #fff;
+            text-shadow: 7px -7px 20px #000; /* 가로, 세로 거리, 번짐 지정, 색상 지정 */
+        }
+
+        /*text-transform */
+        .transform1 { text-transform: e;}
+        .transform2 { text-transform: uppe;}
+        .transform3 { text-transform: lowercase;}
+
+        /* letter-spacing */
+        .spacing-parent {
+            background-color: rgb(140, 230, 162);
+        }
+        .spacing1 {
+            letter-spacing: 0.2em;
+        }
+        .spacing2 {
+            letter-spacing: 0.5em;
+        }
+
+        /* word-spacing */
+        .spacing3 {
+            word-spacing: 2em;
+        }
+
+        /* list-style-type */
+        .book1 {
+            list-style-type: none;
+        }
+        .book2 {
+            list-style-type: circle;
+        }
+        .book3 {
+            list-style-position: inside;
+            list-style-type: decimal-leading-zero;
+        }
+
+        /* list-style-image */
+        .list-image {
+            list-style-image: url(./image/dot.png) ;
+        }
+
+        /* table */
+        table {
+            caption-side: bottom;
+            border: 1px solid black;
+            border-spacing: 1px 4px;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px dotted black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+<body>
+    <!--font-family-->
+    <div class="font-family"> 
+        <p class="serif">가보자고 Gabojago</p>
+        <p class="sans-serif">가보자고 Gabojago</p>
+        <p class="monospace">가보자고 Gabojago</p>
+        <p class="cursive">가보자고 Gabojago</p>
+        <p class="fantasy">가보자고 Gabojago</p>
+    </div>
+
+    <!--em 예시-->
+    <div class="em-parent">
+        parent
+        <p class="em-child">child</p>
+    </div>
+    <br>
+
+    <!--rem 예시-->
+    <div class="rem-parent">
+        parent
+        <p class="rem-child">child</p>
+    </div>
+
+    <!--백분율예시-->
+    <div class="per-parent">
+        parent
+        <p class="per-child">child</p>
+    </div>
+
+    <!--ex의 쓰임새-->
+    <div class="ex-example">X<sup>x</sup> H<sub>2</sub>O</div>
+
+    <!--italic 과 oblique의 차이-->
+    <div class="italic-ob">
+        <p>가나다라마바사</p>
+        <p class="italic">가나다라마바사</p>
+        <p class="ob">가나다라마바사</p>
+    </div>
+
+    <!--상대적 두께-->
+    <div class="border-parent">
+        가보자고(500)
+        <p class="border-child">가보자고(700)</p>
+        <p class="lighter-child">가보자고(100)</p>
+    </div>
+
+    <!--text-align-->
+    <div class="align-parent">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        <br><br>
+        <div class="start">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)
+        </div>
+        <br>
+        <div class="end">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </div>
+        <br>
+        <div class="left">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </div>
+        <br>
+        <div class="right">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </div>
+        <br>
+        <div class="center">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </div>
+        <br>
+        <div class="justify">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </div>
+        <br>
+        <div class="match-parent">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </div>
+    </div>
+
+    <!--line-height의 px과 숫자의 차이-->
+    <p class="ex3">각급 선거관리위원회는 선거인명부의 작성등 선거사무와 국민투표사무에 관하여 관계 행정기관에 필요한 지시를 할 수 있다. 국가는 국민 모두의 생산 및 생활의 기반이 되는 국토의 효율적이고 균형있는 이용·개발과 보전을 위하여 법률이 정하는 바에 의하여 그에 관한 필요한 제한과 의무를 과할 수 있다
+    </p>
+    <p class="ex4">각급 선거관리위원회는 선거인명부의 작성등 선거사무와 국민투표사무에 관하여 관계 행정기관에 필요한 지시를 할 수 있다. 국가는 국민 모두의 생산 및 생활의 기반이 되는 국토의 효율적이고 균형있는 이용·개발과 보전을 위하여 법률이 정하는 바에 의하여 그에 관한 필요한 제한과 의무를 과할 수 있다
+    </p>
+
+    <!--line-height의 px의 문제점: 글자크기를 바꿨을때 line-height도 바꿔줘야함. 그래서 배수로 적는걸 권장-->
+    <p class="ex5">각급 선거관리위원회는 선거인명부의 작성등 선거사무와 국민투표사무에 관하여 관계 행정기관에 필요한 지시를 할 수 있다. 국가는 국민 모두의 생산 및 생활의 기반이 되는 국토의 효율적이고 균형있는 이용·개발과 보전을 위하여 법률이 정하는 바에 의하여 그에 관한 필요한 제한과 의무를 과할 수 있다
+    </p>
+    <p class="ex6">각급 선거관리위원회는 선거인명부의 작성등 선거사무와 국민투표사무에 관하여 관계 행정기관에 필요한 지시를 할 수 있다. 국가는 국민 모두의 생산 및 생활의 기반이 되는 국토의 효율적이고 균형있는 이용·개발과 보전을 위하여 법률이 정하는 바에 의하여 그에 관한 필요한 제한과 의무를 과할 수 있다
+    </p>
+
+    <!--line-height는 1.4~1.7이 읽기에 적당-->
+    <p class="ex7">각급 선거관리위원회는 선거인명부의 작성등 선거사무와 국민투표사무에 관하여 관계 행정기관에 필요한 지시를 할 수 있다. 국가는 국민 모두의 생산 및 생활의 기반이 되는 국토의 효율적이고 균형있는 이용·개발과 보전을 위하여 법률이 정하는 바에 의하여 그에 관한 필요한 제한과 의무를 과할 수 있다
+    </p>
+
+    <!--세로정렬 lign-height-->
+    <h1 class="heading">HTML</h1>
+
+    <!--text-decoration-->
+    <p style="text-decoration: none;">none</p>
+    <p style="text-decoration: underline;">underline</p>
+    <p style="text-decoration: overline;">overline</p>
+    <p style="text-decoration: line-through;">line through</p>
+
+    <!--text-shadow-->
+    <h1 class="shadow1">가보자고</h1>
+    <h1 class="shadow2">가보자고</h1>
+    <h1 class="shadow3">가보자고</h1>
+
+     <!--text-transform-->
+     <h1 class="transform1">gabojago</h1>
+     <h1 class="transform2">gabojago</h1>
+     <h1 class="transform3">GABOJAGO</h1>
+
+     <!--letter-spacing-->
+     <div class="spacing-parent">
+         <p>가보자고</p>
+         <p class="spacing1">가보자고</p>
+         <p class="spacing2">가보자고</p>
+     </div>
+
+     <!--word-spacing-->
+     <p>가보자고는 최고의 회사 정말 짱이에요</p>
+     <p class="spacing3">가보자고는 최고의 회사 정말 짱이에요</p>
+
+     <!--list-style-type-->
+     <ul class="book1">
+         <li>자기만의 방</li>
+         <li>방한림전</li>
+         <li>그레이스</li>
+     </ul>
+    <ul class="book2">
+        <li>시녀 이야기</li>
+        <li>증언들</li>
+        <li>오만과 편견</li>
+    </ul>
+    <ol class="book3">
+        <li>우리가 빛의 속도로 갈 수 없다면</li>
+        <li>지구 끝의 온실</li>
+        <li>사이보그가 되다</li>
+    </ol>
+
+    <!--list-style-image-->
+    <ul class="list-image">
+        <li>피카츄</li>
+        <li>꼬부기</li>
+        <li>리자몽</li>
+    </ul>
+
+    <!--table-style-->
+    <table>
+        <caption>선물용과 가정용 상품 구성</caption>
+        <thead>
+            <tr>
+                <th>용도</th>
+                <th>중량</th>
+                <th>개수</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">선물용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>35,000원</td>
+            </tr>
+            <tr>
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>52,000원</td>
+            </tr>
+            <tr>
+                <td rowspan="2">가정용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>30,000원</td>
+            </tr>
+            <tr>
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>47,000원</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
