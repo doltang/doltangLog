@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/resetcss@1.0.3/reset.min.css"
+    />
+    <title>Columns and Rows</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* fr은 container에 꽉차는 비율로 설정하는 단위, 1 : 2: 1 로 설정하고 싶다면..? */
+        grid-template-rows: 100px 100px;
+        grid-gap: 10px 15px;
+        /* 값이 반복되면 repeat() 함수를 이용할 수 있다
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 100px);
+        */
+        /* 줄 높이 보다 내용이많아 내용이 잘리면, minmax()함수를 사용해 최솟값과 최댓값을 지정 가능
+        grid-template-rows: minmax(100px auto); */
+        /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); auto-fot: 남는 공간 없이 꽉 채우기*/
+        /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        auto-fit: 최소너비(200px) 만 표시하고 남는 공간 그대로 둠; */
+      }
+
+      .item {
+        border: 1px dashed red;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        1Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget
+        nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit.
+        Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed
+      </div>
+      <div class="item">
+        2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget
+        nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit.
+        Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed
+      </div>
+      <div class="item">
+        3Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget
+        nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit.
+        Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed
+      </div>
+      <div class="item">
+        4Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget
+      </div>
+      <div class="item">
+        5Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget
+      </div>
+      <div class="item">
+        6Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget
+      </div>
+    </div>
+  </body>
+</html>
